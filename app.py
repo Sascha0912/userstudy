@@ -18,6 +18,10 @@ def check_user():
 def hello_world():  # put application's code here
     return render_template('overview.html')
 
+@app.route('/userstudy/privacy')
+def privacy():
+    return render_template('privacy.html')
+
 
 @app.route('/userstudy/studyu')
 def studyu():
