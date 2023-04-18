@@ -3,9 +3,9 @@ How does this compare to your expectations?
 Why would somebody use this?
 What parts were the most important for you?
 Is there anything missing?
-What adjectives would you use to describe this?
-On a scale of 1-5, how likely or unlikely would yoube to recommend this to a friend?
-Would you use this?
+What adjectives would you use to describe this? (limit to 5 words)
+On a scale of 1-5, how likely or unlikely would you be to recommend this to a friend?
+Would you use this? (Yes/No Question)
 
 
 

@@ -1,22 +1,26 @@
 from flask import Flask, render_template
 import json
 import mariadb
+from config.config import *
 
 app = Flask(__name__)
 
 
 def check_user():
     mariadb.connect(
-        host='85.214.159.31',
-        port=3306,
-        user='sascha',
-        password='',
-        database='ux_tests'
+        host=conf['host'],
+        port=conf['port'],
+        user=conf['user'],
+        password=conf['password'],
+        database=conf['database']
     )
+
 
 @app.route('/')
 def hello_world():  # put application's code here
+    # check_user()
     return render_template('overview.html')
+
 
 @app.route('/userstudy/privacy')
 def privacy():
