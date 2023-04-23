@@ -29,7 +29,8 @@ This questionnaire deals with the optimal design of user interfaces in the App S
 This survey is being created in the course of writing a scientific master thesis at the Hasso Plattner Institute in Potsdam.
 During the registration to the study, the age, as well as the IT affinity of the participating person will be recorded.
 
-There is the right to information about the personal data collected, as well as the right to rectification, deletion, restriction of processing of the data, as well as a right to object to processing.
+There is the right to information about the personal data collected, as well as a right to delete the personal data, but this is only possible before the completion of the study.
+In this case, please contact the person responsible for the study.
 
 You have the following personal rights in the context of this survey:
 - Participation in the survey is voluntary. You can cancel the questionnaire at any time.
