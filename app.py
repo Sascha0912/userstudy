@@ -1,7 +1,9 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import json
 import mariadb
 from config.config import *
+import uuid
+import sys
 
 app = Flask(__name__)
 
@@ -21,6 +23,25 @@ def hello_world():  # put application's code here
     # check_user()
     return render_template('overview.html')
 
+
+@app.route('/usergenerator', methods=['GET', 'POST'])
+def usergenerator():
+    if request.method == 'POST':
+        age = request.form['age']
+        affinity = request.form['affinity']
+        print("Age " + age + " affinity: " + affinity)
+        myuuid = str(uuid.uuid4())
+        userid = str(hash(age+affinity+myuuid) % (sys.maxsize + 1) * 2)
+
+        data = {
+            'age': age,
+            'affinity': affinity,
+            'userid': userid
+        }
+
+        return render_template('usergenerator.html', data=data, show_results=1)
+    elif request.method == 'GET':
+        return render_template('usergenerator.html', show_results=0)
 
 @app.route('/userstudy/privacy')
 def privacy():

@@ -1,9 +1,10 @@
 What is your first reaction to this?
-How does this compare to your expectations?
-Why would somebody use this?
+(How does this compare to your expectations?)
+(Why would somebody use this?)
 What parts were the most important for you?
 Is there anything missing?
-What adjectives would you use to describe this? (limit to 5 words)
+(What adjectives would you use to describe this? (limit to 5 words))
+What was unclear?
 On a scale of 1-5, how likely or unlikely would you be to recommend this to a friend?
 Would you use this? (Yes/No Question)
 
