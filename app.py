@@ -84,9 +84,12 @@ def studyu():
     return render_template('studyu.html')
 
 
-@app.route('/userstudy/1_0')
+@app.route('/userstudy/1_0', methods=['GET', 'POST'])
 def study1_0():
-    return render_template('userstudy1_0.html')
+    if request.method == 'POST':
+        pass
+    elif request.method == 'GET':
+        return render_template('userstudy1_0.html')
 
 
 @app.route('/userstudy/2_0')
