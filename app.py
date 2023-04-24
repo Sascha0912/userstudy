@@ -43,9 +43,40 @@ def usergenerator():
     elif request.method == 'GET':
         return render_template('usergenerator.html', show_results=0)
 
-@app.route('/userstudy/privacy')
+
+@app.route('/userstudy/privacy', methods=['GET', 'POST'])
 def privacy():
-    return render_template('privacy.html')
+    if request.method == 'POST':
+        userid = request.form['userid']
+        print("User ID: "+str(userid))
+
+        conn = mariadb.connect(
+            user=conf['user'],
+            password=conf['password'],
+            host=conf['host'],
+            port=conf['port'],
+            database=conf['database']
+        )
+        cur = conn.cursor()
+
+        # *****************************
+        # *          TEST             *
+        # *****************************
+        # cur.execute("SELECT * FROM users")
+        # for userid, age, affinity, privacy_set in cur:
+        #     print(f"id: {userid}, age: {age}, affinity: {affinity}, privacy: {privacy_set}")
+        # *****************************
+
+        try:
+            cur.execute("UPDATE users SET privacy=1 WHERE id=?", (userid,))
+        except mariadb.Error as e:
+            print(f"Error: {e}")
+        conn.commit()
+        conn.close()
+
+        return render_template('privacy.html')
+    elif request.method == 'GET':
+        return render_template('privacy.html')
 
 
 @app.route('/userstudy/studyu')
